@@ -1,0 +1,62 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 32px;
+  margin: 2rem 8.5%;
+  &__logo {
+    height: 32px;
+  }
+  &__hamburger {
+    height: 20px;
+    padding-top: 6px;
+    text-align: center;
+  }
+  &__nav {
+    display: none;
+    @include body;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+    width: 60%;
+  }
+  &__nav--item {
+    color: $mediumgrey;
+    text-decoration: none;
+  }
+  &__nav--item:active {
+    color: $verydarkblue;
+  }
+}
+
+@include tablet {
+  .header {
+    position: absolute;
+    margin: 0;
+    width: 491px;
+    height: 40px;
+    left: 12.63%;
+    top: 56px;
+    // margin: 56px 23.4375% 56px 12.63%;
+    height: 40px;
+    &__hamburger {
+      display: none;
+    }
+    &__logo {
+      height: 40px;
+    }
+    &__nav {
+      display: flex;
+    }
+  }
+}
+
+@include desktop {
+  .header {
+    position: absolute;
+    width: 35.2%;
+    height: 40px;
+    left: 11.39%;
+    top: 56px;
+  }
+}

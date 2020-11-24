@@ -1,1 +1,100 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+@font-face {
+  font-family: "spartan-bold";
+  src: url(../assets/fonts/Spartan-Bold.ttf);
+}
+
+@font-face {
+  font-family: "spartan";
+  src: url(../assets//fonts/Spartan-Medium.ttf);
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 32px;
+  margin: 2rem 8.5%;
+}
+
+.header__logo {
+  height: 32px;
+}
+
+.header__hamburger {
+  height: 20px;
+  padding-top: 6px;
+  text-align: center;
+}
+
+.header__nav {
+  display: none;
+  font-family: "spartan";
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0;
+  font-weight: 700;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style-type: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 60%;
+}
+
+.header__nav--item {
+  color: #7d828f;
+  text-decoration: none;
+}
+
+.header__nav--item:active {
+  color: #1b1d23;
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    position: absolute;
+    margin: 0;
+    width: 491px;
+    height: 40px;
+    left: 12.63%;
+    top: 56px;
+    height: 40px;
+  }
+  .header__hamburger {
+    display: none;
+  }
+  .header__logo {
+    height: 40px;
+  }
+  .header__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .header {
+    position: absolute;
+    width: 35.2%;
+    height: 40px;
+    left: 11.39%;
+    top: 56px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+/*# sourceMappingURL=index.css.map */
