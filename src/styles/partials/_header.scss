@@ -11,6 +11,27 @@
     height: 20px;
     padding-top: 6px;
     text-align: center;
+    margin: 0;
+  }
+  &__hamburgernav {
+    position: fixed;
+    left: 8.5%;
+    top: 96px;
+    height: 235px;
+    width: 91.46%;
+    text-align: left;
+    list-style-type: none;
+    background-color: $verylightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 48px 19.43%;
+    margin: 0;
+  }
+  &__hamburgernav--item {
+    color: $verydarkblue;
+    text-decoration: none;
+    @include body;
   }
   &__nav {
     display: none;

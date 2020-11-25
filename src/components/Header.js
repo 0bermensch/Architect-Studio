@@ -4,42 +4,52 @@ import hamburger from "../assets/icons/icon-hamburger.svg";
 import close from "../assets/icons/icon-close.svg";
 import { NavLink } from "react-router-dom";
 
-const HamburgerNav = () => {
-  return (
-    <ul className="header__hamburger">
-      <li>
-        <NavLink className="header__hamburger--item" to="/portfolio">
-          Portfolio
-        </NavLink>
-      </li>
-      <li>
-        <NavLink className="header__hamburger--item" to="/about">
-          About Us
-        </NavLink>
-      </li>
-      <li>
-        <NavLink className="header__hamburger--item" to="contacts">
-          Contact
-        </NavLink>
-      </li>
-    </ul>
-  );
-};
-
 const Header = () => {
-  // const [openHamburger, setOpenHamburger] = useState(false);
-  // const handleHamburger = setOpenHamburger(true);
+  const [openNavMenu, setOpenNavMenu] = useState(false);
+  const [navIcon, setNavIcon] = useState(false);
+  const toggle = () => setNavIcon(!navIcon);
 
-  // if (openHamburger === true) {
-  //   return { HamburgerNav };
-  // }
+  let hamburgerNav;
+
+  if (openNavMenu) {
+    hamburgerNav = (
+      <ul className="header__hamburgernav">
+        <li>
+          <NavLink className="header__hamburgernav--item" to="/portfolio">
+            Portfolio
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className="header__hamburgernav--item" to="/about">
+            About Us
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className="header__hamburgernav--item" to="contacts">
+            Contact
+          </NavLink>
+        </li>
+      </ul>
+    );
+  }
 
   return (
     <div className="header">
       <NavLink to="/">
-        <img className="header__logo" src={logo} aalt="logo" />
+        <img className="header__logo" src={logo} alt="logo" />
       </NavLink>
-      <img className="header__hamburger" src={hamburger} alt="hamburger" />
+      <div
+        onClick={() => toggle(!navIcon)}
+        onClick={() => setOpenNavMenu(!openNavMenu)}
+      >
+        <img
+          className="header__hamburger"
+          src={navIcon ? hamburger : close}
+          alt="hamburger"
+        />
+      </div>
+
+      {hamburgerNav}
 
       <ul className="header__nav">
         <li>
